@@ -1,6 +1,6 @@
 const Book = ({ book }) => {
     return (
-        <div className="card card-compact bg-base-100 w-96 p-4 border my-5 m-auto">
+        <div className="card card-compact bg-base-100 w-[350px] p-4 border m-auto">
             <figure className="bg-[#f2f2f2] py-6 rounded-lg">
                 <img className="h-[200px]" src={book.image} />
             </figure>
