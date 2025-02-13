@@ -1,6 +1,6 @@
 const Book = ({ book }) => {
     return (
-        <div className="card card-compact bg-base-100 w-[350px] p-4 border m-auto">
+        <div className="card w-full shadow-lg p-4 m-auto">
             <figure className="bg-[#f2f2f2] py-6 rounded-lg">
                 <img className="h-[200px]" src={book.image} />
             </figure>
@@ -26,6 +26,9 @@ const Book = ({ book }) => {
                         </p>
                     </div>
                 </div>
+                <button className="btn bg-[#25bb13] text-white w-max">
+                    See Details
+                </button>
             </div>
         </div>
     );
