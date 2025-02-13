@@ -24,13 +24,9 @@ const router = createBrowserRouter([
                 element: <Dashboard></Dashboard>,
             },
             {
-                path:'books/bookId',
-                element: <BookDetail></BookDetail>
+                path: "/book/:id",
+                element: <BookDetails></BookDetails>,
             },
-            {
-                path:"/book/:id",
-                element:<BookDetails></BookDetails>
-            }
         ],
     },
 ]);
