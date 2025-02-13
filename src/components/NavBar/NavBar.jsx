@@ -1,6 +1,20 @@
+import { LuBookOpen } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+    const links = (
+        <>
+            <li>
+                <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+                <NavLink to="/books">Listed Books</NavLink>
+            </li>
+            <li>
+                <NavLink to="/pages">Pages to read</NavLink>
+            </li>
+        </>
+    );
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -29,15 +43,7 @@ const NavBar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                     >
-                        <li>
-                            <NavLink to='/'>Home</NavLink>
-                        </li>
-                        <li>
-                            <a>Listed Books</a>
-                        </li>
-                        <li>
-                            <a>Pages to read</a>
-                        </li>
+                        {links}
                         <li>
                             <a className="btn bg-[#22be0b] text-white">
                                 Sign In
@@ -50,20 +56,13 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl font-bold">Boi Poka</a>
+                <a className="text-3xl font-bold text-[#22be0b] flex items-center gap-2">
+                    <LuBookOpen />
+                    Boi Poka
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Listed Books</a>
-                    </li>
-                    <li>
-                        <a>Pages to read</a>
-                    </li>
-                </ul>
+                <ul className="menu menu-horizontal px-1">{links}</ul>
             </div>
             <div className="navbar-end">
                 <a className="btn bg-[#22be0b] text-white mr-2 hidden md:flex">
